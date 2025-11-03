@@ -16,11 +16,7 @@ spec:
     }
 
     stages {
-        stage('Prepare') {
-            steps {
-                git 'https://github.com/MohammadFareedd/simple-python-pyinstaller-app.git'
-            }
-        }
+      
 
         stage('Run Python Script') {
             steps {
