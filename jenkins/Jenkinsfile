@@ -1,3 +1,4 @@
+@Library('exmaple') _
 pipeline {
     agent {
         kubernetes {
@@ -21,6 +22,7 @@ spec:
         stage('Run Python Script') {
             steps {
                 container('python') {
+                    example1(mohammad)
                     sh 'python3 --version'
                     sh 'python3 sources/add2vals.py 3 4'
                 }
