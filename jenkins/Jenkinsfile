@@ -1,4 +1,4 @@
-@Library('exmaple') _
+@Library('exmaple@main') _
 pipeline {
     agent {
         kubernetes {
