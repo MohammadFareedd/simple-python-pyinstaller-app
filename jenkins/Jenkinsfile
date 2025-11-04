@@ -17,12 +17,16 @@ spec:
     }
 
     stages {
- 
-
+         
+        stage('Read From The Shared Library'){
+            steps{
+                example1("mohammad")
+            }
+        }
         stage('Run Python Script') {
             steps {
                 container('python') {
-                    example1("mohammad")
+                    
                     sh 'python3 --version'
                     sh 'python3 sources/add2vals.py 3 4'
                 }
